@@ -1,0 +1,9 @@
+
+# Local H2 database
+clearpath-api/data/
+*.mv.db
+*.trace.db
+*.lock.db
+
+# macOS metadata
+.DS_Store
