@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: clearpath-api
+    # ClearPath local database
+  datasource:
+    url: jdbc:h2:file:./data/clearpath
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+
+    # JPA configuration
+  jpa:
+    hibernate.ddl-auto: update
+    open-in-view: false
+    show-sql: false
+
+paypal:
+  base-url: https://api-m.sandbox.paypal.com
+  #client-id: ${PAYPAL_CLIENT_ID}
+  #client-secret: ${PAYPAL_CLIENT_SECRET}
+  client-id: ${CLIENT_ID:}
+  client-secret: ${CLIENT_SECRET:}
+  webhook-id: ${PAYPAL_WEBHOOK_ID:}
+
+gemini:
+  api-key: ${GEMINI_API_KEY:}
+  base-url: https://generativelanguage.googleapis.com/v1beta
+  model: gemini-3.5-flash-lite
+
+# Protect ClearPath AI investigation endpoint
+clearpath:
+  ai-access-token: ${CLEARPATH_AI_ACCESS_TOKEN:}
+
+
